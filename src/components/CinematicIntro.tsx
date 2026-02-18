@@ -62,7 +62,7 @@ const CinematicIntro = ({ onComplete }: { onComplete: () => void }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
             >
-              DE LA MANO
+              D' LA MANO
             </motion.h1>
             <motion.p
               className="font-serif text-base md:text-lg italic text-primary-foreground/50 mt-6 max-w-xs text-center"

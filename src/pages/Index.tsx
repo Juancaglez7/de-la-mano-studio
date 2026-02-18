@@ -35,7 +35,7 @@ const Index = () => {
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
                 <p className="font-display text-4xl sm:text-5xl md:text-6xl text-primary leading-none mb-6">
-                  DE LA MANO
+                  D' LA MANO
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.3}>
