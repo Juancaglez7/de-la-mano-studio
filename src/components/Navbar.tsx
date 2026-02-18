@@ -5,12 +5,12 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/services", label: "Services" },
-  { to: "/how-we-work", label: "How We Work" },
-  { to: "/team", label: "Team" },
-  { to: "/resources", label: "Resources" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Inicio" },
+  { to: "/services", label: "Servicios" },
+  { to: "/how-we-work", label: "Cómo Trabajamos" },
+  { to: "/team", label: "Equipo" },
+  { to: "/resources", label: "Recursos" },
+  { to: "/contact", label: "Contacto" },
 ];
 
 const Navbar = () => {
@@ -51,7 +51,7 @@ const Navbar = () => {
                 mode === "families" ? "bg-primary text-primary-foreground" : "text-muted-foreground"
               }`}
             >
-              For Families
+              Para Familias
             </button>
             <button
               onClick={() => setMode("professionals")}
@@ -59,14 +59,14 @@ const Navbar = () => {
                 mode === "professionals" ? "bg-primary text-primary-foreground" : "text-muted-foreground"
               }`}
             >
-              For Professionals
+              Para Profesionales
             </button>
           </div>
           <Link
             to="/contact"
             className="px-5 py-2 bg-primary text-primary-foreground text-sm font-display tracking-wider rounded-full hover:opacity-90 transition-opacity"
           >
-            GET IN TOUCH
+            CONTACTAR
           </Link>
         </div>
 
@@ -105,7 +105,7 @@ const Navbar = () => {
                     mode === "families" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"
                   }`}
                 >
-                  Families
+                  Familias
                 </button>
                 <button
                   onClick={() => setMode("professionals")}
@@ -113,7 +113,7 @@ const Navbar = () => {
                     mode === "professionals" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"
                   }`}
                 >
-                  Professionals
+                  Profesionales
                 </button>
               </div>
             </nav>
