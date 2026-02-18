@@ -2,36 +2,36 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const team = [
   {
-    name: "Name Placeholder",
-    role: "Lead Therapist",
-    approach: "Developmental and family-centered",
-    specialties: "Language delays, autism, early communication",
+    name: "Nombre Placeholder",
+    role: "Terapeuta Principal",
+    approach: "Enfoque evolutivo y centrado en la familia",
+    specialties: "Retrasos del lenguaje, autismo, comunicación temprana",
   },
   {
-    name: "Name Placeholder",
-    role: "Occupational Therapist",
-    approach: "Sensory integration and motor skills",
-    specialties: "Fine motor, sensory processing, daily routines",
+    name: "Nombre Placeholder",
+    role: "Terapeuta Ocupacional",
+    approach: "Integración sensorial y habilidades motoras",
+    specialties: "Motricidad fina, procesamiento sensorial, rutinas diarias",
   },
   {
-    name: "Name Placeholder",
-    role: "Child Psychologist",
-    approach: "Play-based and behavioral",
-    specialties: "Behavior, attention, social-emotional development",
+    name: "Nombre Placeholder",
+    role: "Psicóloga Infantil",
+    approach: "Enfoque lúdico y conductual",
+    specialties: "Conducta, atención, desarrollo socioemocional",
   },
   {
-    name: "Name Placeholder",
-    role: "Family Coach",
-    approach: "Strengths-based coaching",
-    specialties: "Parent guidance, routines, sibling dynamics",
+    name: "Nombre Placeholder",
+    role: "Orientadora Familiar",
+    approach: "Acompañamiento basado en fortalezas",
+    specialties: "Orientación a padres, rutinas, dinámica entre hermanos",
   },
 ];
 
 const principles = [
-  { title: "Clarity", desc: "We explain everything clearly — no jargon, no ambiguity." },
-  { title: "Evidence", desc: "Our methods are grounded in science and validated tools." },
-  { title: "Empathy", desc: "We meet every family where they are, with warmth and respect." },
-  { title: "Collaboration", desc: "We work with families, schools, and other professionals as a team." },
+  { title: "Claridad", desc: "Explicamos todo de forma clara — sin tecnicismos ni ambigüedades." },
+  { title: "Evidencia", desc: "Nuestros métodos están respaldados por la ciencia y herramientas validadas." },
+  { title: "Empatía", desc: "Recibimos a cada familia donde se encuentra, con calidez y respeto." },
+  { title: "Colaboración", desc: "Trabajamos con familias, colegios y otros profesionales como un equipo." },
 ];
 
 const Team = () => (
@@ -39,10 +39,10 @@ const Team = () => (
     <section className="py-20 md:py-28">
       <div className="container">
         <ScrollReveal>
-          <span className="badge-stamp mb-6 inline-block">Our People</span>
-          <h1 className="text-5xl md:text-7xl mb-4">THE TEAM</h1>
+          <span className="badge-stamp mb-6 inline-block">Nuestro Equipo</span>
+          <h1 className="text-5xl md:text-7xl mb-4">EL EQUIPO</h1>
           <p className="font-serif text-xl text-muted-foreground italic max-w-lg leading-relaxed mb-16">
-            A multidisciplinary team united by one goal: giving every child the best possible start.
+            Un equipo multidisciplinar unido por un mismo objetivo: dar a cada niño el mejor comienzo posible.
           </p>
         </ScrollReveal>
 
@@ -58,11 +58,11 @@ const Team = () => (
                     <h3 className="text-xl mb-1">{member.name}</h3>
                     <p className="font-display text-xs tracking-widest text-primary mb-3">{member.role.toUpperCase()}</p>
                     <p className="font-serif text-muted-foreground leading-relaxed mb-2">
-                      <span className="text-foreground font-medium not-italic">Approach:</span>{" "}
+                      <span className="text-foreground font-medium not-italic">Enfoque:</span>{" "}
                       <span className="italic">{member.approach}</span>
                     </p>
                     <p className="font-serif text-muted-foreground leading-relaxed">
-                      <span className="text-foreground font-medium not-italic">Specialties:</span>{" "}
+                      <span className="text-foreground font-medium not-italic">Especialidades:</span>{" "}
                       <span className="italic">{member.specialties}</span>
                     </p>
                   </div>
@@ -76,9 +76,9 @@ const Team = () => (
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-8">
             <div className="editorial-line" />
-            <span className="font-serif text-lg text-muted-foreground italic">What guides us</span>
+            <span className="font-serif text-lg text-muted-foreground italic">Lo que nos guía</span>
           </div>
-          <h2 className="text-4xl md:text-5xl mb-10">OUR PRINCIPLES</h2>
+          <h2 className="text-4xl md:text-5xl mb-10">NUESTROS PRINCIPIOS</h2>
         </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {principles.map((p, i) => (

@@ -5,34 +5,34 @@ import { ArrowRight } from "lucide-react";
 
 const services = [
   {
-    title: "Developmental Assessment (0–6)",
-    who: "Children showing delays or differences in any area of development.",
-    what: "Comprehensive evaluation using validated tools to understand strengths and challenges.",
-    session: "1–2 sessions of structured observation and standardized testing, plus a detailed written report.",
+    title: "Valoración del Desarrollo (0–6)",
+    who: "Niños que muestran retrasos o diferencias en cualquier área del desarrollo.",
+    what: "Evaluación integral con herramientas validadas para comprender fortalezas y dificultades.",
+    session: "1–2 sesiones de observación estructurada y pruebas estandarizadas, más un informe escrito detallado.",
   },
   {
-    title: "Individual Therapy Sessions",
-    who: "Children who need targeted, one-on-one intervention.",
-    what: "Speech, motor, cognitive, social-emotional, or behavioral goals — tailored to each child.",
-    session: "45–60 minute sessions with the child, incorporating play-based and structured activities.",
+    title: "Sesiones de Terapia Individual",
+    who: "Niños que necesitan intervención personalizada, uno a uno.",
+    what: "Objetivos en habla, motricidad, cognición, socioemocional o conducta — adaptados a cada niño.",
+    session: "Sesiones de 45–60 minutos con el niño, combinando actividades lúdicas y estructuradas.",
   },
   {
-    title: "Parent & Family Coaching",
-    who: "Families seeking guidance on supporting their child's development at home.",
-    what: "Practical strategies, routines, and tools to reinforce progress outside of sessions.",
-    session: "Scheduled coaching calls or in-person sessions, with written action plans.",
+    title: "Orientación a Padres y Familias",
+    who: "Familias que buscan apoyo para acompañar el desarrollo de su hijo en casa.",
+    what: "Estrategias prácticas, rutinas y herramientas para reforzar los avances fuera de las sesiones.",
+    session: "Sesiones de orientación presenciales o por videollamada, con planes de acción escritos.",
   },
   {
-    title: "School & Professional Coordination",
-    who: "Families and professionals who need alignment across settings.",
-    what: "Collaboration with teachers, pediatricians, and other therapists to ensure consistency.",
-    session: "Reports, meetings, and shared documentation tailored to each case.",
+    title: "Coordinación con Colegios y Profesionales",
+    who: "Familias y profesionales que necesitan alinearse entre entornos.",
+    what: "Colaboración con docentes, pediatras y otros terapeutas para garantizar coherencia.",
+    session: "Informes, reuniones y documentación compartida, adaptados a cada caso.",
   },
   {
-    title: "Targeted Programs",
-    who: "Children with specific needs in speech, motor skills, communication, or daily routines.",
-    what: "Focused intervention blocks with clear, measurable goals.",
-    session: "Structured programs with regular review points and family involvement.",
+    title: "Programas Específicos",
+    who: "Niños con necesidades puntuales en habla, motricidad, comunicación o rutinas diarias.",
+    what: "Bloques de intervención focalizados con objetivos claros y medibles.",
+    session: "Programas estructurados con puntos de revisión periódicos y participación de la familia.",
   },
 ];
 
@@ -43,17 +43,17 @@ const Services = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <ScrollReveal>
-              <span className="badge-stamp mb-6 inline-block">What We Offer</span>
-              <h1 className="text-5xl md:text-7xl mb-4">OUR SERVICES</h1>
+              <span className="badge-stamp mb-6 inline-block">Lo que ofrecemos</span>
+              <h1 className="text-5xl md:text-7xl mb-4">NUESTROS SERVICIOS</h1>
               <p className="font-serif text-xl text-muted-foreground italic max-w-md leading-relaxed">
-                Every service is designed to be clear, collaborative, and grounded in evidence — adapted to your child and your family.
+                Cada servicio está diseñado para ser claro, colaborativo y basado en evidencia — adaptado a tu hijo y tu familia.
               </p>
             </ScrollReveal>
           </div>
           <ScrollReveal delay={0.2} direction="right">
             <img
               src={servicesImage}
-              alt="Therapist working with a child in a bright, welcoming space"
+              alt="Terapeuta trabajando con un niño en un espacio luminoso y acogedor"
               className="rounded-2xl shadow-warm w-full object-cover aspect-square"
             />
           </ScrollReveal>
@@ -69,15 +69,15 @@ const Services = () => (
                     <h3 className="text-2xl md:text-3xl mb-4">{service.title}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
-                        <p className="font-display text-xs tracking-widest text-primary mb-2">WHO IT'S FOR</p>
+                        <p className="font-display text-xs tracking-widest text-primary mb-2">PARA QUIÉN</p>
                         <p className="font-serif text-muted-foreground leading-relaxed">{service.who}</p>
                       </div>
                       <div>
-                        <p className="font-display text-xs tracking-widest text-primary mb-2">WHAT WE WORK ON</p>
+                        <p className="font-display text-xs tracking-widest text-primary mb-2">QUÉ TRABAJAMOS</p>
                         <p className="font-serif text-muted-foreground leading-relaxed">{service.what}</p>
                       </div>
                       <div>
-                        <p className="font-display text-xs tracking-widest text-primary mb-2">WHAT A SESSION LOOKS LIKE</p>
+                        <p className="font-display text-xs tracking-widest text-primary mb-2">CÓMO ES UNA SESIÓN</p>
                         <p className="font-serif text-muted-foreground leading-relaxed">{service.session}</p>
                       </div>
                     </div>
@@ -94,7 +94,7 @@ const Services = () => (
               to="/contact"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-display text-lg tracking-wider rounded-full hover:opacity-90 transition-opacity"
             >
-              REQUEST AN ASSESSMENT <ArrowRight size={18} />
+              SOLICITAR VALORACIÓN <ArrowRight size={18} />
             </Link>
           </div>
         </ScrollReveal>

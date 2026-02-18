@@ -7,31 +7,31 @@ const Footer = () => (
         <div className="md:col-span-2">
           <h3 className="text-3xl mb-3">D' LA MANO</h3>
           <p className="font-serif text-lg text-muted-foreground max-w-sm italic">
-            Evidence-led support, delivered with warmth — and a clear plan for your child's development.
+            Acompañamiento basado en evidencia, con calidez humana y un plan claro para el desarrollo de tu hijo.
           </p>
         </div>
         <div>
-          <h4 className="font-display text-lg tracking-wider mb-4">NAVIGATE</h4>
+          <h4 className="font-display text-lg tracking-wider mb-4">NAVEGAR</h4>
           <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-            <Link to="/services" className="hover:text-foreground transition-colors">Services</Link>
-            <Link to="/how-we-work" className="hover:text-foreground transition-colors">How We Work</Link>
-            <Link to="/team" className="hover:text-foreground transition-colors">Team</Link>
-            <Link to="/resources" className="hover:text-foreground transition-colors">Resources</Link>
-            <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
+            <Link to="/services" className="hover:text-foreground transition-colors">Servicios</Link>
+            <Link to="/how-we-work" className="hover:text-foreground transition-colors">Cómo Trabajamos</Link>
+            <Link to="/team" className="hover:text-foreground transition-colors">Equipo</Link>
+            <Link to="/resources" className="hover:text-foreground transition-colors">Recursos</Link>
+            <Link to="/contact" className="hover:text-foreground transition-colors">Contacto</Link>
           </nav>
         </div>
         <div>
-          <h4 className="font-display text-lg tracking-wider mb-4">CONNECT</h4>
+          <h4 className="font-display text-lg tracking-wider mb-4">CONTACTO</h4>
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
             <span>hello@delamano.com</span>
             <span>+1 (555) 000-0000</span>
-            <span className="mt-2 text-xs">Location placeholder</span>
+            <span className="mt-2 text-xs">Ubicación placeholder</span>
           </div>
         </div>
       </div>
       <div className="editorial-line mt-12 mb-6" />
       <p className="text-xs text-muted-foreground">
-        © {new Date().getFullYear()} D' La Mano. All rights reserved. — Early Intervention Project (0–6 years)
+        © {new Date().getFullYear()} D' La Mano. Todos los derechos reservados. — Proyecto de Intervención Temprana (0–6 años)
       </p>
     </div>
   </footer>

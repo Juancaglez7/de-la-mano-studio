@@ -3,34 +3,34 @@ import { FileText, Download } from "lucide-react";
 
 const resources = [
   {
-    title: "Development Milestones (0–6)",
-    desc: "A clear overview of what to expect at each stage — motor, language, social, and cognitive.",
-    tag: "Guide",
+    title: "Hitos del Desarrollo (0–6)",
+    desc: "Una visión clara de qué esperar en cada etapa — motor, lenguaje, social y cognitivo.",
+    tag: "Guía",
   },
   {
-    title: "Early Warning Signs",
-    desc: "When to seek support: a simple checklist for parents and caregivers.",
+    title: "Señales de Alerta Temprana",
+    desc: "Cuándo buscar apoyo: una lista sencilla para padres y cuidadores.",
     tag: "Checklist",
   },
   {
-    title: "Play Ideas at Home",
-    desc: "Simple, evidence-informed activities to support your child's development through play.",
-    tag: "Activities",
+    title: "Ideas de Juego en Casa",
+    desc: "Actividades simples y basadas en evidencia para apoyar el desarrollo de tu hijo a través del juego.",
+    tag: "Actividades",
   },
   {
-    title: "Routines & Behavior Tips",
-    desc: "Practical strategies for daily routines, transitions, and managing challenging moments.",
-    tag: "Tips",
+    title: "Rutinas y Consejos de Conducta",
+    desc: "Estrategias prácticas para rutinas diarias, transiciones y momentos difíciles.",
+    tag: "Consejos",
   },
   {
-    title: "Understanding Sensory Needs",
-    desc: "What sensory processing means and how to create a supportive environment at home.",
-    tag: "Guide",
+    title: "Comprendiendo las Necesidades Sensoriales",
+    desc: "Qué significa el procesamiento sensorial y cómo crear un entorno de apoyo en casa.",
+    tag: "Guía",
   },
   {
-    title: "Preparing for Your First Visit",
-    desc: "What to expect, what to bring, and how to help your child feel comfortable.",
-    tag: "Preparation",
+    title: "Preparándote para tu Primera Visita",
+    desc: "Qué esperar, qué traer y cómo ayudar a tu hijo a sentirse cómodo.",
+    tag: "Preparación",
   },
 ];
 
@@ -38,10 +38,10 @@ const Resources = () => (
   <section className="py-20 md:py-28">
     <div className="container max-w-4xl">
       <ScrollReveal>
-        <span className="badge-stamp mb-6 inline-block">For Families</span>
-        <h1 className="text-5xl md:text-7xl mb-4">RESOURCES</h1>
+        <span className="badge-stamp mb-6 inline-block">Para Familias</span>
+        <h1 className="text-5xl md:text-7xl mb-4">RECURSOS</h1>
         <p className="font-serif text-xl text-muted-foreground italic max-w-lg leading-relaxed mb-16">
-          Guides, checklists, and ideas to support your child's development at home.
+          Guías, listas y actividades para apoyar el desarrollo de tu hijo en casa.
         </p>
       </ScrollReveal>
 
@@ -70,11 +70,11 @@ const Resources = () => (
       <ScrollReveal>
         <div className="mt-12 bg-card rounded-2xl p-8 border border-border/50 text-center">
           <p className="font-serif text-lg text-muted-foreground italic">
-            PDF downloads coming soon. For now, feel free to{" "}
+            Descargas en PDF próximamente. Mientras tanto, no dudes en{" "}
             <a href="/contact" className="text-primary underline underline-offset-4">
-              contact us
+              contactarnos
             </a>{" "}
-            and we'll share resources directly.
+            y te compartiremos los recursos directamente.
           </p>
         </div>
       </ScrollReveal>
