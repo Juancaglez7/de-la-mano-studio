@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import logo from "@/assets/logo.png";
 
 const CinematicIntro = ({ onComplete }: { onComplete: () => void }) => {
   const [phase, setPhase] = useState<"text" | "reveal" | "done">("text");
@@ -56,14 +57,14 @@ const CinematicIntro = ({ onComplete }: { onComplete: () => void }) => {
             >
               Intervención temprana · 0–6 años
             </motion.p>
-            <motion.h1
-              className="font-display text-6xl sm:text-7xl md:text-9xl text-primary-foreground tracking-wide text-center leading-[0.9]"
+            <motion.img
+              src={logo}
+              alt="D' La Mano"
+              className="h-32 sm:h-40 md:h-56 w-auto invert"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-            >
-              D' LA MANO
-            </motion.h1>
+            />
             <motion.p
               className="font-serif text-base md:text-lg italic text-primary-foreground/50 mt-6 max-w-xs text-center"
               initial={{ opacity: 0 }}

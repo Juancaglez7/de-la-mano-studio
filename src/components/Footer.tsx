@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="border-t border-border bg-card">
     <div className="container py-16 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
         <div className="md:col-span-2">
-          <h3 className="text-3xl mb-3">D' LA MANO</h3>
+          <img src={logo} alt="D' La Mano" className="h-16 w-auto mb-3" />
           <p className="font-serif text-lg text-muted-foreground max-w-sm italic">
             Centro de atención temprana y desarrollo infantil en Jerez de la Frontera.
           </p>

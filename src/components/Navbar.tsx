@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Inicio" },
@@ -32,8 +33,8 @@ const Navbar = () => {
 
       <div className="bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="font-display text-2xl md:text-3xl tracking-wide text-foreground">
-            D' LA MANO
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="D' La Mano" className="h-12 md:h-14 w-auto" />
           </Link>
 
           {/* Desktop nav */}
