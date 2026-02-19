@@ -32,9 +32,9 @@ const Navbar = () => {
       </div>
 
       <div className="bg-background/80 backdrop-blur-md border-b border-border/50">
-        <div className="container flex items-center justify-between h-16 md:h-20">
+        <div className="container flex items-center justify-between h-24 md:h-28">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="D' La Mano" className="h-12 md:h-14 w-auto" />
+            <img src={logo} alt="D' La Mano" className="h-20 md:h-24 w-auto" />
           </Link>
 
           {/* Desktop nav */}
