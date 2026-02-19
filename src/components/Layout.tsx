@@ -16,7 +16,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <>
       <ScrollProgress />
       <Navbar />
-      <main className="pt-32 md:pt-36">{children}</main>
+      <main className="pt-40 md:pt-44">{children}</main>
       <Footer />
       <WhatsAppButton />
     </>
