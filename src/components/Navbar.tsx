@@ -32,7 +32,7 @@ const Navbar = () => {
       </div>
 
       <div className="bg-background/80 backdrop-blur-md border-b border-border/50">
-        <div className="container flex items-center justify-between h-32 md:h-36">
+        <div className="container flex items-center justify-between h-20 md:h-24">
           <Link to="/" className="flex items-center">
             <img src={logo} alt="D' La Mano" className="h-28 md:h-32 w-auto" />
           </Link>
