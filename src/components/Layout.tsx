@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ScrollProgress from "./ScrollProgress";
+import WhatsAppButton from "./WhatsAppButton";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const { pathname } = useLocation();
@@ -17,6 +18,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Navbar />
       <main className="pt-24 md:pt-28">{children}</main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 };
