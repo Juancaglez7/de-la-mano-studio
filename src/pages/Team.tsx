@@ -1,96 +1,74 @@
 import ScrollReveal from "@/components/ScrollReveal";
-
-const team = [
-  {
-    name: "Nombre Placeholder",
-    role: "Terapeuta Principal",
-    approach: "Enfoque evolutivo y centrado en la familia",
-    specialties: "Retrasos del lenguaje, autismo, comunicación temprana",
-  },
-  {
-    name: "Nombre Placeholder",
-    role: "Terapeuta Ocupacional",
-    approach: "Integración sensorial y habilidades motoras",
-    specialties: "Motricidad fina, procesamiento sensorial, rutinas diarias",
-  },
-  {
-    name: "Nombre Placeholder",
-    role: "Psicóloga Infantil",
-    approach: "Enfoque lúdico y conductual",
-    specialties: "Conducta, atención, desarrollo socioemocional",
-  },
-  {
-    name: "Nombre Placeholder",
-    role: "Orientadora Familiar",
-    approach: "Acompañamiento basado en fortalezas",
-    specialties: "Orientación a padres, rutinas, dinámica entre hermanos",
-  },
-];
-
-const principles = [
-  { title: "Claridad", desc: "Explicamos todo de forma clara — sin tecnicismos ni ambigüedades." },
-  { title: "Evidencia", desc: "Nuestros métodos están respaldados por la ciencia y herramientas validadas." },
-  { title: "Empatía", desc: "Recibimos a cada familia donde se encuentra, con calidez y respeto." },
-  { title: "Colaboración", desc: "Trabajamos con familias, colegios y otros profesionales como un equipo." },
-];
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const Team = () => (
   <>
     <section className="py-20 md:py-28">
-      <div className="container">
+      <div className="container max-w-4xl">
         <ScrollReveal>
-          <span className="badge-stamp mb-6 inline-block">Nuestro Equipo</span>
-          <h1 className="text-5xl md:text-7xl mb-4">EL EQUIPO</h1>
+          <span className="badge-stamp mb-6 inline-block">Quién está detrás</span>
+          <h1 className="text-5xl md:text-7xl mb-4">EQUIPO</h1>
           <p className="font-serif text-xl text-muted-foreground italic max-w-lg leading-relaxed mb-16">
-            Un equipo multidisciplinar unido por un mismo objetivo: dar a cada niño el mejor comienzo posible.
+            Dirección y coordinación a cargo de una profesional comprometida con la infancia.
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-          {team.map((member, i) => (
-            <ScrollReveal key={i} delay={i * 0.1}>
-              <div className="bg-card rounded-2xl p-8 border border-border/50 card-hover h-full">
-                <div className="flex items-start gap-5">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center font-display text-2xl text-primary shrink-0">
-                    {member.name.split(" ").map(n => n[0]).join("")}
-                  </div>
-                  <div>
-                    <h3 className="text-xl mb-1">{member.name}</h3>
-                    <p className="font-display text-xs tracking-widest text-primary mb-3">{member.role.toUpperCase()}</p>
-                    <p className="font-serif text-muted-foreground leading-relaxed mb-2">
-                      <span className="text-foreground font-medium not-italic">Enfoque:</span>{" "}
-                      <span className="italic">{member.approach}</span>
-                    </p>
-                    <p className="font-serif text-muted-foreground leading-relaxed">
-                      <span className="text-foreground font-medium not-italic">Especialidades:</span>{" "}
-                      <span className="italic">{member.specialties}</span>
-                    </p>
-                  </div>
-                </div>
+        <ScrollReveal delay={0.1}>
+          <div className="bg-card rounded-2xl p-8 md:p-12 border border-border/50 mb-16">
+            <div className="flex flex-col md:flex-row items-start gap-8">
+              {/* Photo placeholder */}
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+                <span className="font-display text-4xl text-primary/40">Foto</span>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl md:text-3xl mb-2">Dirección del Centro</h2>
+                <p className="font-display text-xs tracking-widest text-primary mb-4">COORDINACIÓN Y DIRECCIÓN</p>
+                <p className="font-serif text-lg text-muted-foreground leading-relaxed">
+                  Profesional especializada en el ámbito educativo y social, con formación en Integración Social, Educación Infantil y Educación Social, y experiencia en atención a menores con necesidades educativas diversas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Valores */}
+        <ScrollReveal>
+          <div className="flex items-center gap-4 mb-8">
+            <div className="editorial-line" />
+            <span className="font-serif text-lg text-muted-foreground italic">Lo que nos define</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl mb-10">NUESTROS VALORES</h2>
+        </ScrollReveal>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            { title: "Profesionalidad", desc: "Formación continua y rigor en cada intervención." },
+            { title: "Orden", desc: "Procesos claros y estructurados para cada familia." },
+            { title: "Seguridad", desc: "Un entorno protegido y normativo para los más pequeños." },
+            { title: "Confianza", desc: "Transparencia y comunicación honesta con las familias." },
+          ].map((v, i) => (
+            <ScrollReveal key={v.title} delay={i * 0.1}>
+              <div className="bg-card rounded-2xl p-6 border border-border/50">
+                <span className="font-display text-3xl text-primary/15 leading-none block mb-2">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="text-xl mb-2">{v.title}</h3>
+                <p className="font-serif text-muted-foreground">{v.desc}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
 
-        {/* Principles */}
         <ScrollReveal>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="editorial-line" />
-            <span className="font-serif text-lg text-muted-foreground italic">Lo que nos guía</span>
+          <div className="text-center mt-16">
+            <Link
+              to="/reservar"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-display text-lg tracking-wider rounded-full hover:opacity-90 transition-opacity"
+            >
+              SOLICITAR ENTREVISTA <ArrowRight size={18} />
+            </Link>
           </div>
-          <h2 className="text-4xl md:text-5xl mb-10">NUESTROS PRINCIPIOS</h2>
         </ScrollReveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {principles.map((p, i) => (
-            <ScrollReveal key={p.title} delay={i * 0.1}>
-              <div className="text-center md:text-left">
-                <span className="section-number block mb-2">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="text-xl mb-2">{p.title}</h3>
-                <p className="font-serif text-muted-foreground">{p.desc}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
       </div>
     </section>
   </>
