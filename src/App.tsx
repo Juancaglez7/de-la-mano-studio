@@ -3,15 +3,17 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ModeProvider } from "@/contexts/ModeContext";
 import Layout from "@/components/Layout";
 import CinematicIntro from "@/components/CinematicIntro";
 import Index from "./pages/Index";
+import Centro from "./pages/Centro";
 import Services from "./pages/Services";
-import HowWeWork from "./pages/HowWeWork";
 import Team from "./pages/Team";
-import Resources from "./pages/Resources";
+import Methodology from "./pages/Methodology";
+import Tarifas from "./pages/Tarifas";
+import Faqs from "./pages/Faqs";
 import Contact from "./pages/Contact";
+import Reservar from "./pages/Reservar";
 import NotFound from "./pages/NotFound";
 import { useState, useCallback } from "react";
 
@@ -24,24 +26,25 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <ModeProvider>
-          <Toaster />
-          <Sonner />
-          {!introDone && <CinematicIntro onComplete={handleIntroComplete} />}
-          <BrowserRouter>
-            <Layout>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/how-we-work" element={<HowWeWork />} />
-                <Route path="/team" element={<Team />} />
-                <Route path="/resources" element={<Resources />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Layout>
-          </BrowserRouter>
-        </ModeProvider>
+        <Toaster />
+        <Sonner />
+        {!introDone && <CinematicIntro onComplete={handleIntroComplete} />}
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/centro" element={<Centro />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/methodology" element={<Methodology />} />
+              <Route path="/tarifas" element={<Tarifas />} />
+              <Route path="/faqs" element={<Faqs />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/reservar" element={<Reservar />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );

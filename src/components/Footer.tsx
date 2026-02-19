@@ -7,32 +7,43 @@ const Footer = () => (
         <div className="md:col-span-2">
           <h3 className="text-3xl mb-3">D' LA MANO</h3>
           <p className="font-serif text-lg text-muted-foreground max-w-sm italic">
-            Acompañamiento basado en evidencia, con calidez humana y un plan claro para el desarrollo de tu hijo.
+            Centro de atención temprana y desarrollo infantil en Jerez de la Frontera.
           </p>
         </div>
         <div>
           <h4 className="font-display text-lg tracking-wider mb-4">NAVEGAR</h4>
           <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
+            <Link to="/centro" className="hover:text-foreground transition-colors">Centro</Link>
             <Link to="/services" className="hover:text-foreground transition-colors">Servicios</Link>
-            <Link to="/how-we-work" className="hover:text-foreground transition-colors">Cómo Trabajamos</Link>
             <Link to="/team" className="hover:text-foreground transition-colors">Equipo</Link>
-            <Link to="/resources" className="hover:text-foreground transition-colors">Recursos</Link>
+            <Link to="/methodology" className="hover:text-foreground transition-colors">Metodología</Link>
+            <Link to="/tarifas" className="hover:text-foreground transition-colors">Tarifas</Link>
+            <Link to="/faqs" className="hover:text-foreground transition-colors">FAQs</Link>
             <Link to="/contact" className="hover:text-foreground transition-colors">Contacto</Link>
+            <Link to="/reservar" className="hover:text-foreground transition-colors">Reservar</Link>
           </nav>
         </div>
         <div>
           <h4 className="font-display text-lg tracking-wider mb-4">CONTACTO</h4>
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-            <span>hello@delamano.com</span>
-            <span>+1 (555) 000-0000</span>
-            <span className="mt-2 text-xs">Ubicación placeholder</span>
+            <a href="tel:611658382" className="hover:text-foreground transition-colors">📞 611 65 83 82</a>
+            <a href="https://wa.me/34611658382" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">📱 WhatsApp</a>
+            <span>✉ info@dlamano.es</span>
+            <span className="mt-2">📍 Jerez de la Frontera</span>
           </div>
         </div>
       </div>
       <div className="editorial-line mt-12 mb-6" />
-      <p className="text-xs text-muted-foreground">
-        © {new Date().getFullYear()} D' La Mano. Todos los derechos reservados. — Proyecto de Intervención Temprana (0–6 años)
-      </p>
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <p className="text-xs text-muted-foreground">
+          © {new Date().getFullYear()} D' La Mano. Todos los derechos reservados.
+        </p>
+        <div className="flex gap-4 text-xs text-muted-foreground">
+          <span className="hover:text-foreground transition-colors cursor-pointer">Aviso legal</span>
+          <span className="hover:text-foreground transition-colors cursor-pointer">Política de privacidad</span>
+          <span className="hover:text-foreground transition-colors cursor-pointer">Política de cookies</span>
+        </div>
+      </div>
     </div>
   </footer>
 );
