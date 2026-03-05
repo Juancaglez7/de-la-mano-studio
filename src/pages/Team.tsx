@@ -45,7 +45,7 @@ const Team = () => (
             <div className="led-dot" />
             <span className="font-serif text-lg text-muted-foreground italic">Lo que nos define</span>
           </div>
-          <h2 className="text-3xl md:text-5xl mb-10">NUESTROS VALORES</h2>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl mb-10 led-glow-text">NUESTROS VALORES</h2>
         </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {[

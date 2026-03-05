@@ -114,6 +114,10 @@ export default {
           "0%": { transform: "translateX(-100%)", opacity: "0" },
           "100%": { transform: "translateX(0)", opacity: "1" },
         },
+        "neon-pulse": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(0 0% 100% / 0.3), 0 0 40px hsl(30 35% 55% / 0.08)" },
+          "50%": { boxShadow: "0 0 35px hsl(0 0% 100% / 0.5), 0 0 70px hsl(30 35% 55% / 0.18)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

@@ -32,7 +32,7 @@ const Programas = () => (
               <div className="w-10 h-10 rounded-full bg-led/15 flex items-center justify-center">
                 <Sun size={20} className="text-led" />
               </div>
-              <h2 className="text-3xl md:text-5xl led-glow-text">MAÑANAS</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl led-glow-text">MAÑANAS</h2>
             </div>
             <p className="font-display text-sm tracking-widest text-led mb-4">PERSONAS MAYORES</p>
             <div className="w-full h-[2px] bg-gradient-to-r from-led/30 via-led/10 to-transparent mb-10" />
@@ -188,7 +188,7 @@ const Programas = () => (
               <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center">
                 <Moon size={20} className="text-primary" />
               </div>
-              <h2 className="text-3xl md:text-5xl">TARDES</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl led-glow-text">TARDES</h2>
             </div>
             <p className="font-display text-sm tracking-widest text-primary mb-10">INFANCIA (0–6 AÑOS)</p>
           </ScrollReveal>
