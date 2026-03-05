@@ -24,7 +24,8 @@
     --input: 33 20% 86%;
     --ring: 28 42% 50%;
     --radius: 0.75rem;
-    --led-accent: 140 20% 60%;
+    --led-accent: 140 20% 55%;
+    --led-warm: 28 42% 55%;
     --sidebar-background: 36 30% 94%;
     --sidebar-foreground: 220 12% 12%;
     --sidebar-primary: 28 42% 50%;
@@ -96,6 +97,24 @@
   .led-corner {
     @apply absolute w-8 h-8;
     border-color: hsl(var(--led-accent) / 0.3);
+  }
+  .led-glow-text {
+    text-shadow: 0 0 20px hsl(var(--led-accent) / 0.3), 0 0 40px hsl(var(--led-accent) / 0.1);
+  }
+  .led-border-card {
+    border-left: 2px solid hsl(var(--led-accent) / 0.3);
+    box-shadow: -4px 0 12px -4px hsl(var(--led-accent) / 0.15);
+  }
+  .led-dot {
+    @apply w-2 h-2 rounded-full;
+    background: hsl(var(--led-accent));
+    box-shadow: 0 0 6px hsl(var(--led-accent) / 0.5);
+  }
+  .led-badge {
+    @apply inline-block px-3 py-1 text-xs font-display tracking-widest uppercase rounded-full;
+    border: 1px solid hsl(var(--led-accent) / 0.3);
+    color: hsl(var(--led-accent));
+    text-shadow: 0 0 8px hsl(var(--led-accent) / 0.2);
   }
   .badge-stamp {
     @apply inline-block px-3 py-1 text-xs font-display tracking-widest uppercase border border-primary/30 text-primary rounded-full;
