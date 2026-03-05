@@ -10,7 +10,7 @@ const Centro = () => (
           <span className="badge-stamp mb-6 inline-block">Conócenos</span>
           <h1 className="text-5xl md:text-7xl mb-4">EL CENTRO</h1>
           <p className="font-serif text-xl text-muted-foreground italic max-w-lg leading-relaxed mb-16">
-            Centro privado especializado en atención temprana y desarrollo infantil con enfoque educativo y preventivo.
+            Centro privado especializado en estimulación, desarrollo y bienestar con enfoque profesional y personalizado.
           </p>
         </ScrollReveal>
 
@@ -19,7 +19,7 @@ const Centro = () => (
           <div className="bg-card rounded-2xl p-8 md:p-12 border border-border/50 mb-10">
             <h2 className="text-2xl md:text-3xl mb-6">QUIÉNES SOMOS</h2>
             <p className="font-serif text-lg text-muted-foreground leading-relaxed">
-              D' La Mano es un centro especializado en atención temprana y desarrollo infantil ubicado en Jerez de la Frontera. Ofrecemos un servicio profesional, estructurado y cercano, orientado a niños de 0 a 6 años que presentan dificultades o diferencias en su desarrollo.
+              D' La Mano es un centro integral de estimulación y desarrollo ubicado en Jerez de la Frontera. Ofrecemos un servicio profesional, estructurado y cercano, orientado a personas de todas las edades que necesitan acompañamiento especializado.
             </p>
           </div>
         </ScrollReveal>
