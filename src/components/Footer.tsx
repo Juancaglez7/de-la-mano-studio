@@ -8,16 +8,17 @@ const Footer = () => (
         <div className="md:col-span-2">
           <img src={logo} alt="D' La Mano" className="h-16 w-auto mb-3" />
           <p className="font-serif text-lg text-muted-foreground max-w-sm italic">
-            Centro de atención temprana y desarrollo infantil en Jerez de la Frontera.
+            Centro integral de estimulación y desarrollo en Jerez de la Frontera.
           </p>
         </div>
         <div>
           <h4 className="font-display text-lg tracking-wider mb-4">NAVEGAR</h4>
           <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
             <Link to="/centro" className="hover:text-foreground transition-colors">Centro</Link>
-            <Link to="/services" className="hover:text-foreground transition-colors">Servicios</Link>
+            <Link to="/programas" className="hover:text-foreground transition-colors">Programas</Link>
             <Link to="/team" className="hover:text-foreground transition-colors">Equipo</Link>
             <Link to="/methodology" className="hover:text-foreground transition-colors">Metodología</Link>
+            <Link to="/galeria" className="hover:text-foreground transition-colors">Galería</Link>
             <Link to="/tarifas" className="hover:text-foreground transition-colors">Tarifas</Link>
             <Link to="/faqs" className="hover:text-foreground transition-colors">FAQs</Link>
             <Link to="/contact" className="hover:text-foreground transition-colors">Contacto</Link>
@@ -29,12 +30,13 @@ const Footer = () => (
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
             <a href="tel:611658382" className="hover:text-foreground transition-colors">📞 611 65 83 82</a>
             <a href="https://wa.me/34611658382" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">📱 WhatsApp</a>
-            <span>✉ info@dlamano.es</span>
+            {/* Replace with actual email if domain differs */}
+            <span>✉ contacto@dlamano.es</span>
             <span className="mt-2">📍 Jerez de la Frontera</span>
           </div>
         </div>
       </div>
-      <div className="editorial-line mt-12 mb-6" />
+      <div className="led-line mt-12 mb-6" />
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} D' La Mano. Todos los derechos reservados.

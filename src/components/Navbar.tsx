@@ -7,9 +7,10 @@ import logo from "@/assets/logo.png";
 const navLinks = [
   { to: "/", label: "Inicio" },
   { to: "/centro", label: "Centro" },
-  { to: "/services", label: "Servicios" },
-  { to: "/team", label: "Equipo" },
+  { to: "/programas", label: "Programas" },
   { to: "/methodology", label: "Metodología" },
+  { to: "/galeria", label: "Galería" },
+  { to: "/team", label: "Equipo" },
   { to: "/tarifas", label: "Tarifas" },
   { to: "/faqs", label: "FAQs" },
   { to: "/contact", label: "Contacto" },
@@ -21,10 +22,10 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Top bar with phone */}
+      {/* Top bar */}
       <div className="bg-primary text-primary-foreground">
         <div className="container flex items-center justify-between h-8 text-xs font-display tracking-wider">
-          <span>Centro de Atención Temprana · Jerez de la Frontera</span>
+          <span>Centro integral de estimulación y desarrollo · Jerez</span>
           <a href="tel:611658382" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
             <Phone size={12} /> 611 65 83 82
           </a>
@@ -38,7 +39,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -54,7 +55,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-3">
             <Link
               to="/reservar"
               className="px-5 py-2 bg-primary text-primary-foreground text-sm font-display tracking-wider rounded-full hover:opacity-90 transition-opacity"
@@ -63,8 +64,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
+          <button className="xl:hidden text-foreground" onClick={() => setOpen(!open)}>
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-b border-border overflow-hidden"
+            className="xl:hidden bg-background border-b border-border overflow-hidden"
           >
             <nav className="container py-6 flex flex-col gap-4">
               {navLinks.map((link) => (

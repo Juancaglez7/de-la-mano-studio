@@ -62,6 +62,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        led: {
+          DEFAULT: "hsl(var(--led-accent))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
