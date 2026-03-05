@@ -24,7 +24,7 @@
     --input: 33 20% 86%;
     --ring: 28 42% 50%;
     --radius: 0.75rem;
-    --led-accent: 140 20% 55%;
+    --led-accent: 30 35% 55%;
     --led-warm: 28 42% 55%;
     --sidebar-background: 36 30% 94%;
     --sidebar-foreground: 220 12% 12%;
@@ -125,10 +125,67 @@
   .card-premium {
     @apply bg-card rounded-2xl border border-border/50 transition-all duration-300 ease-out hover:shadow-warm hover:-translate-y-1;
   }
+  .card-neon-white {
+    @apply rounded-2xl p-6 lg:p-8 border border-white/60 relative;
+    background: radial-gradient(ellipse at center, hsl(0 0% 100% / 0.95), hsl(var(--card)));
+    box-shadow: 
+      0 0 20px hsl(0 0% 100% / 0.3),
+      0 0 40px hsl(var(--led-accent) / 0.08),
+      0 4px 20px -4px hsl(0 0% 0% / 0.06);
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+  }
+  .card-neon-white:hover {
+    box-shadow: 
+      0 0 30px hsl(0 0% 100% / 0.5),
+      0 0 60px hsl(var(--led-accent) / 0.15),
+      0 8px 30px -4px hsl(0 0% 0% / 0.08);
+    transform: translateY(-2px);
+  }
+  .neon-arrow {
+    @apply flex items-center;
+  }
+  .neon-arrow .neon-arrow-line {
+    @apply h-[1px] flex-1;
+    background: linear-gradient(90deg, hsl(var(--led-accent) / 0.15), hsl(var(--led-accent) / 0.4));
+  }
+  .neon-arrow .neon-arrow-tip {
+    @apply w-0 h-0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 6px solid hsl(var(--led-accent) / 0.5);
+  }
+  .neon-arrow-vertical {
+    @apply flex flex-col items-center;
+  }
+  .neon-arrow-vertical .neon-arrow-line {
+    @apply w-[1px] flex-1 min-h-[20px];
+    background: linear-gradient(180deg, hsl(var(--led-accent) / 0.15), hsl(var(--led-accent) / 0.4));
+  }
+  .neon-arrow-vertical .neon-arrow-tip {
+    @apply w-0 h-0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid hsl(var(--led-accent) / 0.5);
+  }
+  .stat-number {
+    @apply font-display text-4xl md:text-5xl leading-none;
+    color: hsl(var(--led-accent));
+    text-shadow: 0 0 15px hsl(var(--led-accent) / 0.3);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes gradient-sweep {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.gradient-sweep {
+  background: linear-gradient(90deg, transparent 0%, hsl(var(--led-accent) / 0.08) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: gradient-sweep 4s ease-in-out infinite;
 }

@@ -26,7 +26,7 @@ const Centro = () => (
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="bg-card rounded-2xl p-8 md:p-10 border border-border/50">
-              <h2 className="text-2xl md:text-3xl mb-6">QUIÉNES SOMOS</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6 led-glow-text">QUIÉNES SOMOS</h2>
               <p className="font-serif text-lg text-muted-foreground leading-relaxed mb-6">
                 D' La Mano es un centro integral de estimulación y desarrollo ubicado en Jerez de la Frontera. Ofrecemos un servicio profesional, estructurado y cercano, orientado a personas de todas las edades que necesitan acompañamiento especializado.
               </p>
@@ -45,7 +45,7 @@ const Centro = () => (
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-2">
               <Building2 className="text-led" size={24} />
-              <h2 className="text-2xl md:text-3xl led-glow-text">INSTALACIONES</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl led-glow-text">INSTALACIONES</h2>
             </div>
             <div className="w-12 h-[2px] bg-gradient-to-r from-led/40 to-transparent mb-8" />
 
@@ -92,7 +92,7 @@ const Centro = () => (
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-2">
               <Cpu className="text-led" size={24} />
-              <h2 className="text-2xl md:text-3xl led-glow-text">MATERIALES Y TECNOLOGÍA</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl led-glow-text">MATERIALES Y TECNOLOGÍA</h2>
             </div>
             <div className="w-12 h-[2px] bg-gradient-to-r from-led/40 to-transparent mb-8" />
 
@@ -136,7 +136,7 @@ const Centro = () => (
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-2">
               <BookOpen className="text-led" size={24} />
-              <h2 className="text-2xl md:text-3xl led-glow-text">PROYECTO EDUCATIVO</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl led-glow-text">PROYECTO EDUCATIVO</h2>
             </div>
             <div className="w-12 h-[2px] bg-gradient-to-r from-led/40 to-transparent mb-4" />
             <p className="font-serif text-lg text-muted-foreground leading-relaxed mb-8">

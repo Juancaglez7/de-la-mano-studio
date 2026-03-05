@@ -55,15 +55,15 @@ const CinematicIntro = ({ onComplete }: { onComplete: () => void }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Intervención temprana · 0–6 años
+              Estimulación · Desarrollo · Bienestar
             </motion.p>
             <motion.img
               src={logo}
               alt="D' La Mano"
-              className="h-32 sm:h-40 md:h-56 w-auto invert"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
+              className="h-48 sm:h-56 md:h-72 lg:h-80 w-auto invert"
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
             />
             <motion.p
               className="font-serif text-base md:text-lg italic text-primary-foreground/50 mt-6 max-w-xs text-center"
@@ -71,7 +71,7 @@ const CinematicIntro = ({ onComplete }: { onComplete: () => void }) => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.5 }}
             >
-              Cada paso cuenta cuando se da a tiempo.
+              Centro integral de estimulación y desarrollo
             </motion.p>
           </motion.div>
         </>
