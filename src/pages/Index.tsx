@@ -17,9 +17,9 @@ import { ArrowRight, MessageCircle, Brain, Heart, Palette, Users, BarChart3, Han
 const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; sub: string }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const textY = useTransform(scrollYProgress, [0.15, 0.55], [60, -100]);
-  const textOpacity = useTransform(scrollYProgress, [0.45, 0.65], [1, 0]);
-  const overlayOpacity = useTransform(scrollYProgress, [0.15, 0.55], [0.55, 0.15]);
+  const textY = useTransform(scrollYProgress, [0.2, 0.6], [40, -120]);
+  const textOpacity = useTransform(scrollYProgress, [0.3, 0.5, 0.65], [1, 0.7, 0]);
+  const overlayOpacity = useTransform(scrollYProgress, [0.2, 0.4, 0.6], [0.7, 0.4, 0.1]);
   const imgScale = useTransform(scrollYProgress, [0.1, 0.7], [1.0, 1.08]);
 
   return (
