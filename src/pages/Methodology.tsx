@@ -271,24 +271,56 @@ const Methodology = () => (
     <HeroSection />
     <div className="led-line" />
 
-    {/* Intro text */}
-    <section className="py-20 md:py-28">
-      <div className="container max-w-3xl text-center">
-        <ScrollReveal>
-          <span className="font-display text-8xl md:text-[10rem] text-primary/[0.04] leading-none select-none pointer-events-none">
-            01
-          </span>
-        </ScrollReveal>
-        <ScrollReveal delay={0.1}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">PROCESO DE INTERVENCIÓN</h2>
-        </ScrollReveal>
-        <ScrollReveal delay={0.2}>
-          <p className="font-serif text-xl text-muted-foreground italic leading-relaxed max-w-2xl mx-auto">
-            Cada familia es única. Por eso, nuestro proceso comienza siempre por escuchar,
-            observar y comprender antes de actuar. Estos son los pasos que seguimos.
-          </p>
-        </ScrollReveal>
-      </div>
+    {/* Apple-style parallax intro */}
+    <section className="relative min-h-[80vh] overflow-hidden flex items-center justify-center">
+      {(() => {
+        const sectionRef = useRef<HTMLDivElement>(null);
+        const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+        const textY = useTransform(scrollYProgress, [0.2, 0.6], [0, -180]);
+        const textOpacity = useTransform(scrollYProgress, [0.4, 0.65], [1, 0]);
+        const imgOpacity = useTransform(scrollYProgress, [0.15, 0.55], [0.06, 0.55]);
+        const imgScale = useTransform(scrollYProgress, [0.15, 0.7], [1.05, 1.15]);
+
+        return (
+          <div ref={sectionRef} className="absolute inset-0">
+            {/* Background image with scroll-driven opacity */}
+            <motion.div className="absolute inset-0 z-0" style={{ opacity: imgOpacity, scale: imgScale }}>
+              <img src={methodologyFamily} alt="Familia en consulta" className="w-full h-full object-cover" />
+            </motion.div>
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background via-background/60 to-background pointer-events-none" />
+            <div className="absolute inset-0 z-[1] bg-gradient-to-t from-background via-transparent to-background pointer-events-none" />
+            {/* Corner decorations */}
+            <div className="absolute top-0 right-0 w-40 h-40 border-t border-r border-led/10 pointer-events-none z-[2]" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 border-b border-l border-led/10 pointer-events-none z-[2]" />
+            {/* Text content */}
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center z-10"
+              style={{ y: textY, opacity: textOpacity }}
+            >
+              <div className="container max-w-3xl text-center">
+                <div className="relative mb-6">
+                  <span className="absolute left-1/2 -translate-x-1/2 -top-10 font-display text-7xl md:text-9xl text-primary/[0.04] leading-none select-none pointer-events-none">
+                    01
+                  </span>
+                  <div className="flex items-center justify-center gap-4">
+                    <div className="w-8 h-[1px] bg-gradient-to-r from-transparent to-led/40" />
+                    <span className="font-serif text-lg text-muted-foreground italic">Nuestro proceso</span>
+                    <div className="w-8 h-[1px] bg-gradient-to-l from-transparent to-led/40" />
+                  </div>
+                </div>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6 led-glow-text">
+                  PROCESO DE INTERVENCIÓN
+                </h2>
+                <p className="font-serif text-xl text-muted-foreground italic leading-relaxed max-w-2xl mx-auto">
+                  Cada familia es única. Por eso, nuestro proceso comienza siempre por escuchar,
+                  observar y comprender antes de actuar. Estos son los pasos que seguimos.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        );
+      })()}
     </section>
 
     {/* Steps with alternating layout */}
