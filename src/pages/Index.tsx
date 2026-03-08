@@ -17,23 +17,35 @@ import { ArrowRight, MessageCircle, Brain, Heart, Palette, Users, BarChart3, Han
 const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; sub: string }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const textY = useTransform(scrollYProgress, [0.2, 0.6], [0, -160]);
-  const textOpacity = useTransform(scrollYProgress, [0.4, 0.65], [1, 0]);
-  const imgOpacity = useTransform(scrollYProgress, [0.15, 0.55], [0.06, 0.55]);
-  const imgScale = useTransform(scrollYProgress, [0.15, 0.7], [1.05, 1.15]);
+  const textY = useTransform(scrollYProgress, [0.15, 0.55], [60, -100]);
+  const imgScale = useTransform(scrollYProgress, [0.1, 0.7], [1.0, 1.08]);
 
   return (
-    <section ref={ref} className="relative min-h-[70vh] overflow-hidden flex items-center justify-center">
-      <motion.div className="absolute inset-0 z-0" style={{ opacity: imgOpacity, scale: imgScale }}>
-        <img src={image} alt="" className="w-full h-full object-cover" />
+    <section ref={ref} className="relative min-h-[85vh] overflow-hidden flex items-center justify-center group cursor-default">
+      {/* Background image — scales on scroll + extra zoom on hover */}
+      <motion.div className="absolute inset-0 z-0" style={{ scale: imgScale }}>
+        <img
+          src={image}
+          alt=""
+          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+        />
       </motion.div>
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background via-background/60 to-background pointer-events-none" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-background via-transparent to-background pointer-events-none" />
-      <div className="absolute top-0 right-0 w-40 h-40 border-t border-r border-led/10 pointer-events-none z-[2]" />
-      <div className="absolute bottom-0 left-0 w-40 h-40 border-b border-l border-led/10 pointer-events-none z-[2]" />
-      <motion.div className="container max-w-3xl text-center relative z-10" style={{ y: textY, opacity: textOpacity }}>
-        <h2 className="text-4xl md:text-6xl lg:text-7xl mb-6 led-glow-text">{quote}</h2>
-        <p className="font-serif text-xl text-muted-foreground italic leading-relaxed">{sub}</p>
+      {/* Dark overlay for contrast */}
+      <div className="absolute inset-0 z-[1] bg-foreground/40 pointer-events-none" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-foreground/60 via-transparent to-foreground/30 pointer-events-none" />
+
+      {/* Corner decorations */}
+      <div className="absolute top-0 right-0 w-40 h-40 border-t border-r border-background/20 pointer-events-none z-[2]" />
+      <div className="absolute bottom-0 left-0 w-40 h-40 border-b border-l border-background/20 pointer-events-none z-[2]" />
+
+      {/* Text — big, centered, fully visible */}
+      <motion.div className="container max-w-5xl text-center relative z-10 px-6" style={{ y: textY }}>
+        <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] leading-[0.9] mb-8 text-background drop-shadow-lg font-display tracking-tight">
+          {quote}
+        </h2>
+        <p className="font-serif text-xl sm:text-2xl md:text-3xl text-background/80 italic leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+          {sub}
+        </p>
       </motion.div>
     </section>
   );
