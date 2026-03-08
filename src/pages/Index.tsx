@@ -21,29 +21,33 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
   const imgScale = useTransform(scrollYProgress, [0.1, 0.7], [1.0, 1.08]);
 
   return (
-    <section ref={ref} className="relative min-h-[85vh] overflow-hidden flex items-center justify-center group cursor-default">
-      {/* Background image — scales on scroll + extra zoom on hover */}
+    <section ref={ref} className="relative min-h-[80vh] overflow-hidden flex items-center justify-center group cursor-default">
+      {/* Background — subtle scroll scale + gentle hover zoom */}
       <motion.div className="absolute inset-0 z-0" style={{ scale: imgScale }}>
         <img
           src={image}
           alt=""
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
         />
       </motion.div>
-      {/* Dark overlay for contrast */}
-      <div className="absolute inset-0 z-[1] bg-foreground/40 pointer-events-none" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-foreground/60 via-transparent to-foreground/30 pointer-events-none" />
+      {/* Refined overlays — softer, Apple-like */}
+      <div className="absolute inset-0 z-[1] bg-foreground/30 pointer-events-none" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-foreground/20 via-transparent to-foreground/50 pointer-events-none" />
 
-      {/* Corner decorations */}
-      <div className="absolute top-0 right-0 w-40 h-40 border-t border-r border-background/20 pointer-events-none z-[2]" />
-      <div className="absolute bottom-0 left-0 w-40 h-40 border-b border-l border-background/20 pointer-events-none z-[2]" />
+      {/* Thin corner accents */}
+      <div className="absolute top-6 right-6 w-20 h-20 border-t border-r border-background/15 pointer-events-none z-[2]" />
+      <div className="absolute bottom-6 left-6 w-20 h-20 border-b border-l border-background/15 pointer-events-none z-[2]" />
 
-      {/* Text — big, centered, fully visible */}
+      {/* Text — large but refined */}
       <motion.div className="container max-w-5xl text-center relative z-10 px-6" style={{ y: textY }}>
-        <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] leading-[0.9] mb-8 text-background drop-shadow-lg font-display tracking-tight">
+        <h2
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.85] mb-6 text-background font-display tracking-tight"
+          style={{ textShadow: '0 2px 30px rgba(0,0,0,0.15)' }}
+        >
           {quote}
         </h2>
-        <p className="font-serif text-xl sm:text-2xl md:text-3xl text-background/80 italic leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+        <div className="w-12 h-[1px] bg-background/30 mx-auto mb-6" />
+        <p className="font-serif text-lg sm:text-xl md:text-2xl text-background/70 italic leading-relaxed max-w-xl mx-auto">
           {sub}
         </p>
       </motion.div>
