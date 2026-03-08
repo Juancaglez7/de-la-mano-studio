@@ -18,6 +18,7 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const textY = useTransform(scrollYProgress, [0.15, 0.55], [60, -100]);
+  const textOpacity = useTransform(scrollYProgress, [0.35, 0.55], [1, 0]);
   const imgScale = useTransform(scrollYProgress, [0.1, 0.7], [1.0, 1.08]);
 
   return (
@@ -30,16 +31,16 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
           className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
         />
       </motion.div>
-      {/* Refined overlays — softer, Apple-like */}
-      <div className="absolute inset-0 z-[1] bg-foreground/30 pointer-events-none" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-foreground/20 via-transparent to-foreground/50 pointer-events-none" />
+      {/* Darker overlays */}
+      <div className="absolute inset-0 z-[1] bg-foreground/50 pointer-events-none" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-foreground/30 via-transparent to-foreground/60 pointer-events-none" />
 
       {/* Thin corner accents */}
       <div className="absolute top-6 right-6 w-20 h-20 border-t border-r border-background/15 pointer-events-none z-[2]" />
       <div className="absolute bottom-6 left-6 w-20 h-20 border-b border-l border-background/15 pointer-events-none z-[2]" />
 
-      {/* Text — large, serif, elegant */}
-      <motion.div className="container max-w-4xl text-center relative z-10 px-6" style={{ y: textY }}>
+      {/* Text — large, serif, elegant — fades out on scroll */}
+      <motion.div className="container max-w-4xl text-center relative z-10 px-6" style={{ y: textY, opacity: textOpacity }}>
         <h2
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] mb-6 text-background font-serif italic font-normal"
           style={{ textShadow: '0 2px 40px rgba(0,0,0,0.12)' }}
