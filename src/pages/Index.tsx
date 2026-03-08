@@ -19,7 +19,7 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const textY = useTransform(scrollYProgress, [0.15, 0.55], [60, -100]);
   const textOpacity = useTransform(scrollYProgress, [0.35, 0.55], [1, 0]);
-  const imgScale = useTransform(scrollYProgress, [0.1, 0.7], [1.0, 1.08]);
+  const imgScale = useTransform(scrollYProgress, [0.15, 0.55], [1.0, 1.15]);
 
   return (
     <section ref={ref} className="relative min-h-[80vh] overflow-hidden flex items-end pb-24 justify-center group cursor-default pt-40">
