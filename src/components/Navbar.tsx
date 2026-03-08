@@ -35,7 +35,14 @@ const Navbar = () => {
       <div className="bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container flex items-center justify-between h-20 md:h-24">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="D' La Mano" className="h-28 md:h-32 w-auto" />
+            <motion.img
+              src={logo}
+              alt="D' La Mano"
+              className="h-28 md:h-32 w-auto"
+              whileHover={{ scale: 1.08, rotate: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 15 }}
+            />
           </Link>
 
           {/* Desktop nav */}
