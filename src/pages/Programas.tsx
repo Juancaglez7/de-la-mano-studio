@@ -1,9 +1,11 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import CinematicHero from "@/components/CinematicHero";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Heart, Palette, Sun, Moon, CheckCircle2, ChevronRight, Camera, Sparkles } from "lucide-react";
 import teamPhoto1 from "@/assets/team-photo-1.jpeg";
 import teamPhoto2 from "@/assets/team-photo-2.jpeg";
 import teamPhoto3 from "@/assets/team-photo-3.jpeg";
+import servicesElderly from "@/assets/services-elderly.jpg";
 
 const BulletItem = ({ children }: { children: string }) => (
   <li className="flex items-start gap-3">
@@ -14,16 +16,16 @@ const BulletItem = ({ children }: { children: string }) => (
 
 const Programas = () => (
   <>
+    <CinematicHero
+      badge="Lo que ofrecemos"
+      title="PROGRAMAS"
+      subtitle="Dos programas diferenciados, adaptados a cada etapa de la vida. Mañanas para personas mayores, tardes para infancia."
+      image={servicesElderly}
+    />
+    <div className="led-line" />
+
     <section className="py-20 md:py-28">
       <div className="container max-w-5xl">
-        <ScrollReveal>
-          <span className="led-badge mb-6 inline-block">Lo que ofrecemos</span>
-          <h1 className="text-5xl md:text-7xl mb-4 led-glow-text">PROGRAMAS</h1>
-          <div className="w-20 h-[2px] bg-gradient-to-r from-led/60 to-transparent mb-6" />
-          <p className="font-serif text-xl text-muted-foreground italic max-w-lg leading-relaxed mb-16">
-            Dos programas diferenciados, adaptados a cada etapa de la vida. Mañanas para personas mayores, tardes para infancia.
-          </p>
-        </ScrollReveal>
 
         {/* ═══ MAÑANAS · PERSONAS MAYORES ═══ */}
         <div id="mayores" className="scroll-mt-40 mb-24">

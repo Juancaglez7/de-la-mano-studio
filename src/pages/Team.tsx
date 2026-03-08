@@ -1,20 +1,22 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import CinematicHero from "@/components/CinematicHero";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import teamPhoto4 from "@/assets/team-photo-4.jpeg";
+import teamPhoto5 from "@/assets/team-photo-5.jpeg";
 
 const Team = () => (
   <>
+    <CinematicHero
+      badge="Quién está detrás"
+      title="EQUIPO"
+      subtitle="Dirección y coordinación a cargo de una profesional comprometida con el desarrollo y el bienestar."
+      image={teamPhoto5}
+    />
+    <div className="led-line" />
+
     <section className="py-20 md:py-28">
       <div className="container max-w-4xl">
-        <ScrollReveal>
-          <span className="led-badge mb-6 inline-block">Quién está detrás</span>
-          <h1 className="text-5xl md:text-7xl mb-4 led-glow-text">EQUIPO</h1>
-          <div className="w-16 h-[2px] bg-gradient-to-r from-led/60 to-transparent mb-6" />
-          <p className="font-serif text-xl text-muted-foreground italic max-w-lg leading-relaxed mb-16">
-            Dirección y coordinación a cargo de una profesional comprometida con el desarrollo y el bienestar.
-          </p>
-        </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
           <div className="card-premium p-8 md:p-12 mb-16 overflow-hidden">

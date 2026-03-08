@@ -1,26 +1,24 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import CinematicHero from "@/components/CinematicHero";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, BookOpen, Building2, Monitor, Cpu, Puzzle, Camera, ChevronRight } from "lucide-react";
 import teamPhoto1 from "@/assets/team-photo-1.jpeg";
 import teamPhoto2 from "@/assets/team-photo-2.jpeg";
 import teamPhoto3 from "@/assets/team-photo-3.jpeg";
+import centroInterior from "@/assets/centro-interior.jpg";
 
 const Centro = () => (
   <>
-    {/* Hero section */}
-    <section className="relative py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
-        <img src={teamPhoto2} alt="" className="w-full h-full object-cover" />
-      </div>
+    <CinematicHero
+      badge="Conócenos"
+      title="EL CENTRO"
+      subtitle="Centro privado especializado en estimulación, desarrollo y bienestar con enfoque profesional y personalizado."
+      image={centroInterior}
+    />
+    <div className="led-line" />
+
+    <section className="py-20 md:py-28">
       <div className="container max-w-5xl relative z-10">
-        <ScrollReveal>
-          <span className="led-badge mb-6 inline-block">Conócenos</span>
-          <h1 className="text-5xl md:text-7xl mb-4 led-glow-text">EL CENTRO</h1>
-          <div className="w-20 h-[2px] bg-gradient-to-r from-led/60 to-transparent mb-6" />
-          <p className="font-serif text-xl text-muted-foreground italic max-w-lg leading-relaxed mb-16">
-            Centro privado especializado en estimulación, desarrollo y bienestar con enfoque profesional y personalizado.
-          </p>
-        </ScrollReveal>
 
         {/* Quiénes somos - with photo */}
         <ScrollReveal>
