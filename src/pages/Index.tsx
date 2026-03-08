@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-10 md:pt-0">
         {/* Background subtle photo */}
         <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
           <img src={servicesImage} alt="" className="w-full h-full object-cover" />
