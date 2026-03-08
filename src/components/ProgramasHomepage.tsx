@@ -3,30 +3,30 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight, Brain, Heart, Palette, Sun, Moon, Baby, BookOpen, Smile, Users2, ClipboardCheck } from "lucide-react";
-import teamPhoto1 from "@/assets/team-photo-1.jpeg";
-import teamPhoto2 from "@/assets/team-photo-2.jpeg";
-import teamPhoto3 from "@/assets/team-photo-3.jpeg";
-import servicesElderly from "@/assets/services-elderly.jpg";
-import servicesFamily from "@/assets/services-family-session.jpg";
+import programaCognitivo from "@/assets/programa-cognitivo.jpg";
+import programaAutonomia from "@/assets/programa-autonomia.jpg";
+import programaArtistica from "@/assets/programa-artistica.jpg";
+import programaMananas from "@/assets/programa-mananas-banner.jpg";
+import programaTardes from "@/assets/programa-tardes-banner.jpg";
 
 const mananas = [
   {
     icon: Brain,
     title: "Estimulación cognitiva y memoria activa",
     desc: "Memoria, atención, lenguaje y orientación a través de actividades dinámicas y adaptadas.",
-    image: teamPhoto1,
+    image: programaCognitivo,
   },
   {
     icon: Heart,
     title: "Taller de autonomía y rutinas",
     desc: "Refuerzo de habilidades cotidianas para ganar seguridad, confianza e independencia.",
-    image: teamPhoto2,
+    image: programaAutonomia,
   },
   {
     icon: Palette,
     title: "Artística y música",
     desc: "Creatividad y música como herramientas de activación cognitiva y socialización.",
-    image: teamPhoto3,
+    image: programaArtistica,
   },
 ];
 
@@ -123,7 +123,7 @@ const ProgramasHomepage = () => {
               {/* Hero banner for mañanas */}
               <div className="relative rounded-2xl overflow-hidden mb-8 md:mb-10">
                 <img
-                  src={servicesElderly}
+                  src={programaMananas}
                   alt="Programa de mañanas"
                   className="w-full h-48 sm:h-56 md:h-72 object-cover"
                 />
@@ -189,7 +189,7 @@ const ProgramasHomepage = () => {
               {/* Hero banner for tardes */}
               <div className="relative rounded-2xl overflow-hidden mb-8 md:mb-10">
                 <img
-                  src={servicesFamily}
+                  src={programaTardes}
                   alt="Programa de tardes"
                   className="w-full h-48 sm:h-56 md:h-72 object-cover"
                 />
