@@ -44,7 +44,7 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
           {quote}
         </h2>
         <div className="w-10 h-[1px] bg-background/25 mx-auto mb-4 md:mb-6" />
-        <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl text-background/60 leading-relaxed max-w-lg mx-auto">
+        <p className="font-serif text-base sm:text-lg md:text-lg lg:text-xl text-background/60 leading-relaxed max-w-lg mx-auto">
           {sub}
         </p>
       </motion.div>
