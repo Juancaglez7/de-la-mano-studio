@@ -18,7 +18,7 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const textY = useTransform(scrollYProgress, [0.15, 0.55], [60, -100]);
-  const textOpacity = useTransform(scrollYProgress, [0.35, 0.55], [1, 0]);
+  const textOpacity = useTransform(scrollYProgress, [0.45, 0.65], [1, 0]);
   const overlayOpacity = useTransform(scrollYProgress, [0.15, 0.55], [0.55, 0.15]);
   const imgScale = useTransform(scrollYProgress, [0.1, 0.7], [1.0, 1.08]);
 
