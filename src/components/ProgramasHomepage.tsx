@@ -189,7 +189,7 @@ const ProgramasHomepage = () => {
               {/* Hero banner for tardes */}
               <div className="relative rounded-2xl overflow-hidden mb-8 md:mb-10">
                 <img
-                  src={servicesFamily}
+                  src={programaTardes}
                   alt="Programa de tardes"
                   className="w-full h-48 sm:h-56 md:h-72 object-cover"
                 />
