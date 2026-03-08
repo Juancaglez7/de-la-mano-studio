@@ -20,7 +20,7 @@ const mananas = [
     icon: Heart,
     title: "Taller de autonomía y rutinas",
     desc: "Refuerzo de habilidades cotidianas para ganar seguridad, confianza e independencia.",
-    image: teamPhoto2,
+    image: programaAutonomia,
   },
   {
     icon: Palette,
