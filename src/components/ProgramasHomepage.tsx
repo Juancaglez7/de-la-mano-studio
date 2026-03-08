@@ -123,7 +123,7 @@ const ProgramasHomepage = () => {
               {/* Hero banner for mañanas */}
               <div className="relative rounded-2xl overflow-hidden mb-8 md:mb-10">
                 <img
-                  src={servicesElderly}
+                  src={programaMananas}
                   alt="Programa de mañanas"
                   className="w-full h-48 sm:h-56 md:h-72 object-cover"
                 />
