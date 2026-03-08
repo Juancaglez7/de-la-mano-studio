@@ -291,7 +291,7 @@ const Index = () => {
       {/* ═══ APPLE-STYLE PARALLAX: ELDERLY ═══ */}
       <ParallaxQuote
         image={servicesElderly}
-        quote="ENVEJECER CON DIGNIDAD"
+        quote="Envejecer con dignidad."
         sub="Activación, autonomía y bienestar — cada mañana cuenta."
       />
 
