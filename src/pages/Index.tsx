@@ -188,7 +188,7 @@ const Index = () => {
       {/* ═══ APPLE-STYLE PARALLAX: MISSION ═══ */}
       <ParallaxQuote
         image={servicesChildren}
-        quote="CADA NIÑO TIENE SU PROPIO RITMO"
+        quote="Cada niño tiene su propio ritmo."
         sub="Nuestro trabajo es acompañarlo con profesionalidad, cercanía y respeto."
       />
 
