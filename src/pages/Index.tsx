@@ -19,7 +19,8 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const textY = useTransform(scrollYProgress, [0.15, 0.55], [60, -100]);
   const textOpacity = useTransform(scrollYProgress, [0.35, 0.55], [1, 0]);
-  const imgScale = useTransform(scrollYProgress, [0.15, 0.55], [1.0, 1.15]);
+  const overlayOpacity = useTransform(scrollYProgress, [0.15, 0.55], [0.55, 0.15]);
+  const imgScale = useTransform(scrollYProgress, [0.1, 0.7], [1.0, 1.08]);
 
   return (
     <section ref={ref} className="relative min-h-[80vh] overflow-hidden flex items-end pb-24 justify-center group cursor-default pt-40">
@@ -31,9 +32,9 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
           className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
         />
       </motion.div>
-      {/* Darker overlays */}
-      <div className="absolute inset-0 z-[1] bg-foreground/50 pointer-events-none" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-foreground/30 via-transparent to-foreground/60 pointer-events-none" />
+      {/* Overlay that fades away as you scroll — image becomes clearer */}
+      <motion.div className="absolute inset-0 z-[1] bg-foreground pointer-events-none" style={{ opacity: overlayOpacity }} />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-foreground/20 via-transparent to-foreground/40 pointer-events-none" />
 
       {/* Thin corner accents */}
       <div className="absolute top-6 right-6 w-20 h-20 border-t border-r border-background/15 pointer-events-none z-[2]" />
