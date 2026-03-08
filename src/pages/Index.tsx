@@ -21,7 +21,7 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
   const imgScale = useTransform(scrollYProgress, [0.1, 0.7], [1.0, 1.08]);
 
   return (
-    <section ref={ref} className="relative min-h-[80vh] overflow-hidden flex items-center justify-center group cursor-default">
+    <section ref={ref} className="relative min-h-[80vh] overflow-hidden flex items-end pb-24 justify-center group cursor-default pt-40">
       {/* Background — subtle scroll scale + gentle hover zoom */}
       <motion.div className="absolute inset-0 z-0" style={{ scale: imgScale }}>
         <img
