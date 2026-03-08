@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
+import ParallaxRevealSection from "@/components/ParallaxRevealSection";
 import heroPhoto from "@/assets/team-photo-5.jpeg";
 import teamPhoto2 from "@/assets/team-photo-2.jpeg";
 import teamPhoto3 from "@/assets/team-photo-3.jpeg";
 import teamPhoto1 from "@/assets/team-photo-1.jpeg";
 import servicesImage from "@/assets/services-image.jpg";
-import { ArrowRight, Shield, MessageCircle, Brain, Heart, Palette, Users, BarChart3, Handshake, Sun, Moon, ArrowDown } from "lucide-react";
+import { ArrowRight, MessageCircle, Brain, Heart, Palette, Users, BarChart3, Handshake, Sun, Moon, ArrowDown } from "lucide-react";
 
 const Index = () => {
   return (
