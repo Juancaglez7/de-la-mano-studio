@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
+import ParallaxRevealSection from "@/components/ParallaxRevealSection";
 import heroPhoto from "@/assets/team-photo-5.jpeg";
 import teamPhoto2 from "@/assets/team-photo-2.jpeg";
 import teamPhoto3 from "@/assets/team-photo-3.jpeg";
 import teamPhoto1 from "@/assets/team-photo-1.jpeg";
 import servicesImage from "@/assets/services-image.jpg";
-import { ArrowRight, Shield, MessageCircle, Brain, Heart, Palette, Users, BarChart3, Handshake, Sun, Moon, ArrowDown } from "lucide-react";
+import { ArrowRight, MessageCircle, Brain, Heart, Palette, Users, BarChart3, Handshake, Sun, Moon, ArrowDown } from "lucide-react";
 
 const Index = () => {
   return (
@@ -219,35 +220,7 @@ const Index = () => {
 
       <div className="led-line" />
 
-      {/* ABOUT / EL CENTRO */}
-      <section className="py-20 md:py-28 bg-card relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-40 h-40 border-t border-r border-led/10 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-40 h-40 border-b border-l border-led/10 pointer-events-none" />
-        <div className="container max-w-3xl text-center relative z-10">
-          <ScrollReveal>
-            <div className="relative mb-8">
-              <span className="absolute left-1/2 -translate-x-1/2 -top-10 font-display text-7xl md:text-9xl text-primary/[0.04] leading-none select-none pointer-events-none">02</span>
-              <div className="flex items-center justify-center gap-4">
-                <div className="w-8 h-[1px] bg-gradient-to-r from-transparent to-led/40" />
-                <span className="font-serif text-lg text-muted-foreground italic">El centro</span>
-                <div className="w-8 h-[1px] bg-gradient-to-l from-transparent to-led/40" />
-              </div>
-            </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6 led-glow-text">UN ESPACIO PROFESIONAL</h2>
-            <p className="font-serif text-xl text-muted-foreground italic leading-relaxed mb-10">
-              Un entorno estructurado, calmado y profesional donde cada persona recibe atención personalizada. Trabajamos con rigor y cercanía, respetando el ritmo de cada proceso.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <div className="bg-background rounded-2xl p-6 border border-led/20 inline-flex items-center gap-3">
-              <Shield className="text-led shrink-0" size={20} />
-              <p className="font-serif text-sm text-muted-foreground text-left">
-                El centro dispone de sistema de videovigilancia en zonas comunes con fines exclusivamente de seguridad, cumpliendo la normativa vigente y señalización informativa.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <ParallaxRevealSection />
 
       <div className="led-line" />
 
