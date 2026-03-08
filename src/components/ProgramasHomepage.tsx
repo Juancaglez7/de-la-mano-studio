@@ -14,7 +14,7 @@ const mananas = [
     icon: Brain,
     title: "Estimulación cognitiva y memoria activa",
     desc: "Memoria, atención, lenguaje y orientación a través de actividades dinámicas y adaptadas.",
-    image: teamPhoto1,
+    image: programaCognitivo,
   },
   {
     icon: Heart,
