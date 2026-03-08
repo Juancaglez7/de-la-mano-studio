@@ -26,7 +26,7 @@ const mananas = [
     icon: Palette,
     title: "Artística y música",
     desc: "Creatividad y música como herramientas de activación cognitiva y socialización.",
-    image: teamPhoto3,
+    image: programaArtistica,
   },
 ];
 
