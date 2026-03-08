@@ -38,7 +38,7 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
 
       <motion.div className="container max-w-4xl text-center relative z-10 px-6" style={{ y: textY, opacity: textOpacity }}>
         <h2
-          className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] mb-4 md:mb-6 text-background font-serif italic font-normal"
+          className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] mb-4 md:mb-6 text-background font-serif italic font-normal"
           style={{ textShadow: '0 2px 40px rgba(0,0,0,0.12)' }}
         >
           {quote}
