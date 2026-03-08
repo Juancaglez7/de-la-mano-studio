@@ -38,16 +38,16 @@ const ParallaxQuote = ({ image, quote, sub }: { image: string; quote: string; su
       <div className="absolute top-6 right-6 w-20 h-20 border-t border-r border-background/15 pointer-events-none z-[2]" />
       <div className="absolute bottom-6 left-6 w-20 h-20 border-b border-l border-background/15 pointer-events-none z-[2]" />
 
-      {/* Text — large but refined */}
-      <motion.div className="container max-w-5xl text-center relative z-10 px-6" style={{ y: textY }}>
+      {/* Text — large, serif, elegant */}
+      <motion.div className="container max-w-4xl text-center relative z-10 px-6" style={{ y: textY }}>
         <h2
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.85] mb-6 text-background font-display tracking-tight"
-          style={{ textShadow: '0 2px 30px rgba(0,0,0,0.15)' }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1] mb-6 text-background font-serif italic font-normal"
+          style={{ textShadow: '0 2px 40px rgba(0,0,0,0.12)' }}
         >
           {quote}
         </h2>
-        <div className="w-12 h-[1px] bg-background/30 mx-auto mb-6" />
-        <p className="font-serif text-lg sm:text-xl md:text-2xl text-background/70 italic leading-relaxed max-w-xl mx-auto">
+        <div className="w-10 h-[1px] bg-background/25 mx-auto mb-6" />
+        <p className="font-serif text-base sm:text-lg md:text-xl text-background/60 leading-relaxed max-w-lg mx-auto">
           {sub}
         </p>
       </motion.div>
@@ -188,7 +188,7 @@ const Index = () => {
       {/* ═══ APPLE-STYLE PARALLAX: MISSION ═══ */}
       <ParallaxQuote
         image={servicesChildren}
-        quote="CADA NIÑO TIENE SU PROPIO RITMO"
+        quote="Cada niño tiene su propio ritmo."
         sub="Nuestro trabajo es acompañarlo con profesionalidad, cercanía y respeto."
       />
 
@@ -291,7 +291,7 @@ const Index = () => {
       {/* ═══ APPLE-STYLE PARALLAX: ELDERLY ═══ */}
       <ParallaxQuote
         image={servicesElderly}
-        quote="ENVEJECER CON DIGNIDAD"
+        quote="Envejecer con dignidad."
         sub="Activación, autonomía y bienestar — cada mañana cuenta."
       />
 
@@ -340,7 +340,7 @@ const Index = () => {
       {/* ═══ APPLE-STYLE PARALLAX: METHODOLOGY ═══ */}
       <ParallaxQuote
         image={methodologyHero}
-        quote="UN PLAN PARA CADA PERSONA"
+        quote="Un plan para cada persona."
         sub="Estructura, seguimiento y adaptación continua."
       />
 
