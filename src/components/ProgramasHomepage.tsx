@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight, Brain, Heart, Palette, Sun, Moon, Baby, BookOpen, Smile, Users2, ClipboardCheck } from "lucide-react";
-import teamPhoto1 from "@/assets/team-photo-1.jpeg";
-import teamPhoto2 from "@/assets/team-photo-2.jpeg";
-import teamPhoto3 from "@/assets/team-photo-3.jpeg";
-import servicesElderly from "@/assets/services-elderly.jpg";
-import servicesFamily from "@/assets/services-family-session.jpg";
+import programaCognitivo from "@/assets/programa-cognitivo.jpg";
+import programaAutonomia from "@/assets/programa-autonomia.jpg";
+import programaArtistica from "@/assets/programa-artistica.jpg";
+import programaMananas from "@/assets/programa-mananas-banner.jpg";
+import programaTardes from "@/assets/programa-tardes-banner.jpg";
 
 const mananas = [
   {
