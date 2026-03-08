@@ -340,7 +340,7 @@ const Index = () => {
       {/* ═══ APPLE-STYLE PARALLAX: METHODOLOGY ═══ */}
       <ParallaxQuote
         image={methodologyHero}
-        quote="UN PLAN PARA CADA PERSONA"
+        quote="Un plan para cada persona."
         sub="Estructura, seguimiento y adaptación continua."
       />
 
